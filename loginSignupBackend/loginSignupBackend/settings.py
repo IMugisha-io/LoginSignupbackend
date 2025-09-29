@@ -49,8 +49,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework_simplejwt',
     'base',
-    'dj_database_url'
-    'gunicorn'
+    'dj_database_url',
+    'gunicorn',
 ]
 
 MIDDLEWARE = [
