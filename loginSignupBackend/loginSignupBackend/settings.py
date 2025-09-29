@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'rest_framework_simplejwt',
     'base',
     'dj_database_url'
+    'gunicorn'
 ]
 
 MIDDLEWARE = [
@@ -98,10 +99,8 @@ WSGI_APPLICATION = 'loginSignupBackend.wsgi.application'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get("DATABASE_URL"),
-        conn_max_age=600,
-        ssl_require=True
+    'default': dj_database_url.parse(
+        "postgresql://loginapp_db_e27u_user:sjvQHBxI7m9WTJzyxor89TyyWWfsgKcf@dpg-d3de4oggjchc73afls20-a.oregon-postgres.render.com/loginapp_db_e27u"
     )
 }
 
